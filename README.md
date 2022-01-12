@@ -1,7 +1,7 @@
 # 5G-UE emulator
 Building Docker images emulate User Equipment from OpenAirInterface. The build scripts assigns a MACVLAN network, builds the UE software in a Docker container and runs the image
 
-To pull the latest ready image from docker hub: docker.io/brunodzogovic/5g_ue:latest
+To pull the latest ready image from docker hub: ``` docker pull brunodzogovic/5g_ue```
 
 To run the NR UE-Softmodem: 
 ```/openairinterface/targets/bin./nr-uesoftmodem.Rel15 --numerology 1 --rfsim --sa -C 3619200000 --band 78 --C0 3 -r 106 --parallel-config PARALLEL_SINGLE_THREAD -O /openair
