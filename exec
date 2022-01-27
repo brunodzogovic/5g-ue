@@ -1,5 +1,8 @@
+The keys are 128-bit AES Rijndael, where the public key is XOR-ed with the operator key (OP) that is all 1-s, stored in the AMF. The resulting OPc is 9f36a7be1f783f641e23776b2a05714c, 
+which the UE uses as a SIM card entry to authenticate to the core network. 
+
 /openairinterface5g/targets/bin# RFSIMULATOR=192.168.10.20 ./nr-uesoftmodem.Rel15 --numerology 1 -r 106 -C 3619200000 -O /openairinterface5g/ci-scripts/conf_files/ue.sa.conf -s 516 --sa --rfsim --uecap_file ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/uecap.xml --parallel-config PARALLEL_SINGLE_THREAD
 
-or just expor the RFSIMULATOR env variable to be the IP address of the gNB before the container starts
+or just export the RFSIMULATOR env variable to be the IP address of the gNB before the container starts
 
 if you use it in Kubernetes, the RFSIMULATOR can be passed via configmap or the gNB instance discovered via service name
