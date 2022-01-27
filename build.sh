@@ -34,3 +34,5 @@ sleep 1
 docker build -t $REPO/5g_ue .
 wait
 docker run -it --privileged --net $MACVLAN_NET --ip $IP_ADDRESS --hostname=5g_ue --restart=unless-stopped --name=5g_ue -v /lib/modules:/lib/modules -v /etc/network:/etc/network:rw --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" $REPO/5g_ue
+docker cp ue.sa.conf 5g_ue:/openairinterface5g/ci-scripts/conf_files
+docker push $REPO/5g_ue

@@ -44,4 +44,4 @@ RUN apt-get update && \
 COPY env.sh /openairinterface5g/env.sh 
 WORKDIR /openairinterface5g
 RUN ./env.sh  
-
+ 
